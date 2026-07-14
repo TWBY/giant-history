@@ -106,7 +106,7 @@
 
   .stats {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1px;
     background: var(--line);
     border: 1px solid var(--line);
@@ -122,7 +122,7 @@
   }
 
   .stat .num {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 800;
     color: var(--accent);
     display: block;
@@ -148,6 +148,11 @@
     padding-bottom: 14px;
     border-bottom: 2px solid var(--ink);
     display: inline-block;
+  }
+
+  h3.subhead {
+    font-size: 18px;
+    margin: 32px 0 12px;
   }
 
   section > p {
@@ -231,6 +236,13 @@
     margin-top: 24px;
   }
 
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 24px;
+  }
+
   .founder {
     display: grid;
     grid-template-columns: 220px 1fr;
@@ -252,21 +264,21 @@
     margin: 0;
   }
 
-  @media (max-width: 640px) {
-    .founder {
-      grid-template-columns: 1fr;
-    }
-    .founder-photo {
-      max-width: 260px;
-      margin: 0 auto;
-    }
-  }
-
   .card {
     background: var(--card);
     border: 1px solid var(--line);
     border-radius: 12px;
     padding: 24px;
+  }
+
+  .card .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 8px;
   }
 
   .card h3 {
@@ -278,6 +290,20 @@
     margin: 0;
     color: var(--ink-soft);
     font-size: 15px;
+  }
+
+  .callout {
+    border-left: 3px solid var(--accent);
+    background: var(--bg-alt);
+    padding: 18px 22px;
+    border-radius: 0 10px 10px 0;
+    margin: 24px 0;
+  }
+
+  .callout p {
+    margin: 0;
+    color: var(--ink);
+    font-size: 15.5px;
   }
 
   footer {
@@ -307,8 +333,10 @@
   @media (max-width: 640px) {
     header.hero { padding: 72px 0 56px; }
     .stats { grid-template-columns: repeat(2, 1fr); }
-    .grid-2 { grid-template-columns: 1fr; }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
     main { padding: 48px 0 20px; }
+    .founder { grid-template-columns: 1fr; }
+    .founder-photo { max-width: 260px; margin: 0 auto; }
   }
 </style>
 </head>
@@ -318,7 +346,7 @@
   <div class="wrap">
     <span class="eyebrow">Taiwan · Since 1972</span>
     <h1>捷安特 <span>GIANT</span><br>台灣自行車王國的崛起之路</h1>
-    <p class="lede">從台中大甲的一間代工廠，到橫跨全球的自行車品牌——捷安特的故事，是台灣製造業從代工走向自主品牌的縮影。</p>
+    <p class="lede">從台中大甲的一間代工廠，到橫跨全球的自行車品牌——捷安特的故事，是台灣製造業從代工走向自主品牌、從價格戰走向價值戰的縮影。</p>
 
     <div class="stats">
       <div class="stat">
@@ -327,11 +355,19 @@
       </div>
       <div class="stat">
         <span class="num">1981</span>
-        <span class="label">自有品牌捷安特誕生</span>
+        <span class="label">自創品牌捷安特</span>
       </div>
       <div class="stat">
-        <span class="num">1986</span>
-        <span class="label">歐洲總公司成立</span>
+        <span class="num">1994</span>
+        <span class="label">股票上市（9921）</span>
+      </div>
+      <div class="stat">
+        <span class="num">1997</span>
+        <span class="label">TCR 車架革命</span>
+      </div>
+      <div class="stat">
+        <span class="num">2012</span>
+        <span class="label">YouBike 全面啟用</span>
       </div>
       <div class="stat">
         <span class="num">93</span>
@@ -346,6 +382,20 @@
   <section>
     <h2>草創時期：從沙鹿到大甲的代工廠</h2>
     <p>1972 年，劉金標與 7 位夥伴——包括姊姊杜劉月嬌、外甥女杜綉珍等人——在台中縣大甲鎮（今台中市大甲區）共同創立「巨大機械股份有限公司」。創業初期，巨大只是一家默默無聞的自行車代工廠，直到 1977 年開始為美國自行車大廠 Schwinn 代工生產，才逐漸站穩腳步。1980 年，巨大成立日南廠，一躍成為台灣最大、亞洲第二大的自行車製造商。</p>
+    <p>然而純代工的隱憂在 1980 年代逐漸浮現：客戶隨時可能轉單，議價權始終不在自己手上。這段「幫別人做嫁衣」的經歷，也埋下了劉金標日後決心打造自有品牌的種子。</p>
+  </section>
+
+  <section>
+    <h2>從代工到品牌：微笑曲線的實踐</h2>
+    <p>1981 年，捷安特品牌正式誕生後，劉金標並未止步於「有品牌」，而是持續思考如何讓台灣自行車產業整體升級。2003 年，他號召包括競爭對手美利達（Merida）在內的上下游廠商，成立「A-Team」產業聯盟，目標不是壓低成本互相削價，而是共同提升研發、品管與交期，推動台灣從「量產代工」轉向「高值化研發製造」中心，避開與中國大陸的低價競爭。</p>
+    <div class="callout">
+      <p>這正是劉金標常談的「微笑曲線」邏輯——附加價值最低的組裝代工位於曲線谷底，兩端的研發設計與品牌行銷才是利潤所在。捷安特從谷底一路爬升，最終站上曲線頂端。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>產品革新：TCR 改寫公路車設計語言</h2>
+    <p>1997 年，捷安特與傳奇設計師 Mike Burrows 合作推出 TCR（Total Compact Road）車架，以較小的三角形車架搭配加長座管，顛覆傳統公路車幾何設計。這項「壓縮車架」（Compact Road）概念在當時相當激進，甚至一度遭國際自由車總會（UCI）質疑是否合乎規範，最終捷安特成功說服 UCI，證明此設計能同時兼顧輕量化與操控性。TCR 後來成為業界主流設計語言，也奠定捷安特在公路車領域的技術話語權。</p>
   </section>
 
   <section>
@@ -377,21 +427,51 @@
         <div class="tl-desc">於荷蘭設立分公司，正式跨出全球化布局的第一步。</div>
       </div>
       <div class="tl-item">
-        <div class="tl-year">2000s</div>
-        <div class="tl-title">躍居全球最大自行車製造商之一</div>
-        <div class="tl-desc">陸續於美國、日本、中國大陸設立分公司與生產基地，並贊助國際職業自行車隊。</div>
+        <div class="tl-year">1989</div>
+        <div class="tl-title">捐助成立運動基金會</div>
+        <div class="tl-desc">劉金標捐助成立台灣首個推廣自行車休閒運動的非營利組織，2000 年更名為「自行車新文化基金會」。</div>
       </div>
       <div class="tl-item">
-        <div class="tl-year">近年</div>
-        <div class="tl-title">推動 YouBike 微笑單車</div>
-        <div class="tl-desc">劉金標晚年大力推動公共自行車系統，讓自行車重新融入台灣城市生活。</div>
+        <div class="tl-year">1994</div>
+        <div class="tl-title">股票上市（證交所代號 9921）</div>
+        <div class="tl-desc">巨大機械掛牌上市，成為資本市場關注的台灣自行車代表企業。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1997</div>
+        <div class="tl-title">TCR Compact Road 車架問世</div>
+        <div class="tl-desc">與設計師 Mike Burrows 合作，推出改寫公路車設計語言的壓縮車架。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2003</div>
+        <div class="tl-title">號召成立 A-Team 產業聯盟</div>
+        <div class="tl-desc">聯合美利達等同業與供應鏈夥伴，推動台灣自行車產業整體升級。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2007</div>
+        <div class="tl-title">73 歲完成單車環島</div>
+        <div class="tl-desc">劉金標以 15 天騎完 973 公里環島，掀起台灣全民單車環島熱潮。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2008</div>
+        <div class="tl-title">女性專屬品牌 Liv 成立</div>
+        <div class="tl-desc">由集團財務長杜綉珍主導創立，是全球首個專為女性打造的自行車品牌。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2012</div>
+        <div class="tl-title">YouBike 微笑單車正式啟用</div>
+        <div class="tl-desc">於台北市全面上線，公共自行車系統帶動台灣城市騎乘文化。</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">2026</div>
+        <div class="tl-title">創辦人劉金標辭世</div>
+        <div class="tl-desc">2026 年 2 月 16 日辭世，享耆壽 93 歲，留下深遠的產業與文化資產。</div>
       </div>
     </div>
   </section>
 
   <section>
     <h2>邁向全球：從台灣品牌到國際企業</h2>
-    <p>憑藉扎實的製造品質與研發實力，捷安特逐步擺脫「台灣代工」的形象，晉升為國際自行車產業的領導品牌。捷安特也積極投入國際職業自行車賽事，贊助多支世界頂級車隊，透過賽場上的能見度進一步鞏固品牌的專業形象。</p>
+    <p>憑藉扎實的製造品質與研發實力，捷安特逐步擺脫「台灣代工」的形象，晉升為國際自行車產業的領導品牌，並成為全球營業額最高的自行車製造商之一。2012 年集團自行車銷售量達 630 萬輛，年營收突破 18 億美元。捷安特也積極投入國際職業自行車賽事，先後贊助 Giant-Alpecin、Team Sunweb 等世界頂級車隊，透過賽場上的能見度進一步鞏固品牌的專業形象。</p>
 
     <div class="grid-2">
       <div class="card">
@@ -400,14 +480,37 @@
       </div>
       <div class="card">
         <h3>品牌全球化</h3>
-        <p>陸續在荷蘭、美國、日本、中國大陸等地設立分公司，建立橫跨全球的產銷網絡。</p>
+        <p>陸續在荷蘭、美國、日本、中國大陸等地設立分公司與生產基地，建立橫跨全球的產銷網絡。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>品牌矩陣：不只有 Giant</h2>
+    <p>今日的巨大集團旗下不只有 Giant 一個品牌，而是形成完整的產品矩陣，分別鎖定不同的騎乘族群與市場定位。</p>
+    <div class="grid-3">
+      <div class="card">
+        <span class="tag">2008</span>
+        <h3>Liv</h3>
+        <p>全球首個純女性自行車品牌，由全女性團隊主導設計、行銷，打造專屬女性車架幾何的公路、越野與砂石車款。</p>
+      </div>
+      <div class="card">
+        <span class="tag">Urban</span>
+        <h3>momentum</h3>
+        <p>主打城市通勤與休閒騎乘，強調舒適性與日常實用性，鎖定都會代步族群。</p>
+      </div>
+      <div class="card">
+        <span class="tag">Performance</span>
+        <h3>CADEX</h3>
+        <p>高階自行車零組件品牌，專攻碳纖維輪組與零件研發，服務職業與競賽級車手。</p>
       </div>
     </div>
   </section>
 
   <section>
     <h2>推動台灣單車文化：YouBike</h2>
-    <p>捷安特的影響力不僅止於出口貿易。劉金標晚年大力推動公共自行車系統，促成了台北市 YouBike 微笑單車的誕生與普及，讓自行車重新融入台灣人的日常生活與城市交通，也讓捷安特這個品牌與台灣的單車文化緊密相連。</p>
+    <p>捷安特的影響力不僅止於出口貿易。1989 年，劉金標捐助成立台灣首個推廣自行車休閒運動的非營利組織，2000 年更名為「自行車新文化基金會」，長期舉辦環島認證、騎乘挑戰等活動，扎根台灣的單車文化。2007 年，時年 73 歲的劉金標親自以 15 天騎完 973 公里完成單車環島，一夕之間帶動全台「單車環島」熱潮，也成為他晚年最廣為人知的形象。</p>
+    <p>2012 年，在他的積極推動下，YouBike 微笑單車正式於台北市全面啟用，讓自行車重新融入台灣人的日常生活與城市交通，也讓捷安特這個品牌與台灣的單車文化緊密相連。</p>
 
     <div class="quote-card">
       <p>「騎自行車，不只是運動，更是一種生活態度。」</p>
@@ -419,13 +522,13 @@
     <h2>創辦人辭世與企業傳承</h2>
     <div class="founder">
       <img class="founder-photo" src="assets/liu-jin-biao.png" alt="捷安特創辦人劉金標手持自行車輪，身穿騎行服">
-      <p>創辦人劉金標一生以自行車為志業，晚年仍身體力行長途環島與環球騎行，是台灣自行車產業的精神象徵。他於近年辭世，享耆壽 93 歲，其開創精神與「巨大集團」至今仍持續影響全球自行車產業。</p>
+      <p>創辦人劉金標一生以自行車為志業，晚年仍身體力行長途環島與環球騎行，是台灣自行車產業的精神象徵。他於 2026 年 2 月 16 日辭世，享耆壽 93 歲，其開創精神與「巨大集團」至今仍持續影響全球自行車產業，也持續透過自行車新文化基金會延續推廣單車生活的使命。</p>
     </div>
   </section>
 
   <section>
     <h2>小結</h2>
-    <p>從大甲小鎮的代工廠，到荷蘭設立歐洲總部，再到推動 YouBike 改變台灣城市交通，捷安特的歷史，某種程度上也是台灣製造業從代工走向自有品牌、從島內走向世界的縮影。</p>
+    <p>從大甲小鎮的代工廠，到荷蘭設立歐洲總部；從一次押上身家的品牌賭注，到號召同業共組 A-Team 推動全產業升級；從 TCR 改寫公路車設計語言，到晚年推動 YouBike 改變台灣城市交通——捷安特的歷史，某種程度上也是台灣製造業從代工走向自有品牌、從價格競爭走向價值創造、從島內走向世界的縮影。</p>
   </section>
 
 </main>
@@ -438,6 +541,10 @@
     <a href="https://www.don1don.com/archives/231750/" target="_blank" rel="noopener">動一動 don1don</a>
     <a href="https://finance.ettoday.net/news/3119684" target="_blank" rel="noopener">ETtoday財經雲</a>
     <a href="https://www.giantgroup-cycling.com/news/96BZj0BpjFjJ3ni8" target="_blank" rel="noopener">巨大集團</a>
+    <a href="https://www.cycling-lifestyle.org.tw/about" target="_blank" rel="noopener">自行車新文化基金會</a>
+    <a href="https://www.cyclist.co.uk/in-depth/bike-history-giant-tcr" target="_blank" rel="noopener">Cyclist — Giant TCR history</a>
+    <a href="https://www.theproscloset.com/blogs/news/giant-road-bike-buyers-guide" target="_blank" rel="noopener">The Pro's Closet — Giant/Liv guide</a>
+    <a href="https://www.stockfeel.com.tw/%E5%B7%A8%E5%A4%A7-9921-%E4%B8%96%E7%95%8C%E7%AC%AC%E4%B8%80%E8%87%AA%E8%A1%8C%E8%BB%8A%E5%93%81%E7%89%8C/" target="_blank" rel="noopener">股感 — 巨大(9921)</a>
   </div>
 </footer>
 
